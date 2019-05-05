@@ -5,21 +5,80 @@
 	<script src="./js/jsaccordion.js"></script>
 </head>
 <body>
-	<div id="test1">new object by selector then test it</div>
-	<div id="test2">new object by dom element then test</div>
-	<div id="test3">direct call by selector then test immediately</div>
-	<div id="test4">direct call and did not keep result then test immediately</div>
-	<script>
-        var a = new JSAccordion( '#test1' );
-        a.test('red');
+<div class="jsac-container">
+	<ul class="jsac-list">
+		<li class="jsac-list-item collapsed">
+			<div class="jsac-header">
+				<span class="jsac-status-icon"></span>
+					<h3>section #1 title</h3>
+			</div>
+			<div class="jsac-body">
+				<p>multi line text can put here<br>
+					it is not only for us. lorem ipsum dollor amore. or other text here<br>
+					i am here
+				</p>
+				<p>another paragraph can set here<br>
+					it is multiline text<br>
+					no problem.
+				</p>
+			</div>
+		</li>
+		<li class="jsac-list-item expanded">
+			<div class="jsac-header">
+				<span class="jsac-status-icon"></span>
+					<h3>section #2 title</h3>
+			</div>
+			<div class="jsac-body">
+				<p>multi line text can put here<br>
+					it is not only for us. lorem ipsum dollor amore. or other text here<br>
+					i am here
+				</p>
+				<p>another paragraph can set here<br>
+					it is multiline text<br>
+					no problem.
+				</p>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="jsac-container">
+	<ul class="jsac-list">
+		<li class="jsac-list-item collapsed">
+			<div class="jsac-header">
+				<span class="jsac-status-icon"></span>
+					<h3>section #1 title</h3>
+			</div>
+			<div class="jsac-body">
+				<p>multi line text can put here<br>
+					it is not only for us. lorem ipsum dollor amore. or other text here<br>
+					i am here
+				</p>
+				<p>another paragraph can set here<br>
+					it is multiline text<br>
+					no problem.
+				</p>
+			</div>
+		</li>
+		<li class="jsac-list-item expanded">
+			<div class="jsac-header">
+				<span class="jsac-status-icon"></span>
+					<h3>section #2 title</h3>
+			</div>
+			<div class="jsac-body">
+				<p>multi line text can put here<br>
+					it is not only for us. lorem ipsum dollor amore. or other text here<br>
+					i am here
+				</p>
+				<p>another paragraph can set here<br>
+					it is multiline text<br>
+					no problem.
+				</p>
+			</div>
+		</li>
+	</ul>
+</div>
 
-        var b = new JSAccordion( document.getElementById('test2') );
-        b.test('green');
 
-        var c = JSAccordion( '#test3' ).test('blue');
 
-        JSAccordion( document.getElementById('test4') ).test('cyan');
-
-	</script>
 </body>
 </html>

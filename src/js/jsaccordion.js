@@ -3,8 +3,7 @@ function JSAccordion(elementOrSelector) {
         return new JSAccordion(elementOrSelector);
 
     //  define public methods
-    this.test = function(color) {
-        this.targetElement.style.color = color;
+    this.init = function() {
     };
 
     //  start construction operations
