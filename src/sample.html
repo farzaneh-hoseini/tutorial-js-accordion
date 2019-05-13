@@ -5,7 +5,7 @@
 	<script src="./js/jsaccordion.js"></script>
 </head>
 <body>
-<div class="container">
+<div class="container" id="main-container">
 	<ul class="list">
 		<li class="list-item collapsed">
 			<div class="header">
@@ -77,6 +77,11 @@
 		</li>
 	</ul>
 </div>
+
+<script>
+    var newJs =new JSAccordion("#main-container");
+    newJs.init();
+</script>
 
 
 

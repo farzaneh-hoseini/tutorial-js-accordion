@@ -4,6 +4,29 @@ function JSAccordion(elementOrSelector) {
 
     //  define public methods
     this.init = function() {
+
+            var ulTags, liTags, firstDiv, secondDiv, hTags;
+            document.getElementById("main-container").classList.add('jsac-container');
+
+            ulTags = document.querySelector("ul");
+            ulTags.classList.add('jsac-list');
+
+            liTags = ulTags.querySelectorAll('li');
+
+            liTags.forEach(function (element) {
+                element.classList.add('jsac-list-item');
+
+                firstDiv = element.querySelector("div:first-child");
+                firstDiv.classList.add('jsac-header');
+
+                secondDiv = element.querySelector("div:last-child");
+                secondDiv.classList.add('jsac-body');
+
+                hTags = element.querySelector('h3');
+                hTags.classList.add('jsac-titl-h');
+
+            });
+
     };
 
     //  start construction operations
