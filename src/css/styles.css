@@ -14,3 +14,11 @@ ul li {
     padding: 10px;
     background: #E8E8E7;
 }
+
+.expanded .jsac-body {
+    display: block;
+}
+
+.collapsed .jsac-body {
+    display: none;
+}

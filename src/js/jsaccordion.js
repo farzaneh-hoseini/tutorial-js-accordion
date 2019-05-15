@@ -6,9 +6,9 @@ function JSAccordion(elementOrSelector) {
     this.init = function() {
 
             var ulTags, liTags, firstDiv, secondDiv, hTags;
-            document.getElementById("main-container").classList.add('jsac-container');
+            this.targetElement.classList.add('jsac-container');
 
-            ulTags = document.querySelector("ul");
+            ulTags = this.targetElement.querySelector("ul")
             ulTags.classList.add('jsac-list');
 
             liTags = ulTags.querySelectorAll('li');
