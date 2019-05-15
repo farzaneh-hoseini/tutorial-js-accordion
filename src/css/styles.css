@@ -1,0 +1,16 @@
+ul li {
+    list-style: none !important;
+}
+.header{
+    width: 100%;
+    height: 35px;
+    line-height: 32px;
+    background: #3482F3;
+    padding-left: 10px;
+}
+.body{
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    padding: 10px;
+    background: #E8E8E7;
+}
