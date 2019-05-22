@@ -38,7 +38,10 @@ function JSAccordion(elementOrSelector) {
             } else if (this.parentNode.classList.contains('expanded')) {
             this.parentNode.classList.remove('expanded');
             this.parentNode.classList.add('collapsed');
+        }   else {
+            this.parentNode.classList.add('collapsed');
         }
+
     }
 
     //  start construction operations
