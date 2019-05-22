@@ -5,29 +5,41 @@ function JSAccordion(elementOrSelector) {
     //  define public methods
     this.init = function() {
 
-            var ulTags, liTags, firstDiv, secondDiv, hTags;
-            this.targetElement.classList.add('jsac-container');
+        var ulTags, liTags, firstDiv, secondDiv, hTags;
+        this.targetElement.classList.add('jsac-container');
 
-            ulTags = this.targetElement.querySelector("ul")
-            ulTags.classList.add('jsac-list');
+        ulTags = this.targetElement.querySelector("ul")
+        ulTags.classList.add('jsac-list');
 
-            liTags = ulTags.querySelectorAll('li');
+        liTags = ulTags.querySelectorAll('li');
 
-            liTags.forEach(function (element) {
-                element.classList.add('jsac-list-item');
+        liTags.forEach(function (element) {
+            element.classList.add('jsac-list-item');
 
-                firstDiv = element.querySelector("div:first-child");
-                firstDiv.classList.add('jsac-header');
+            firstDiv = element.querySelector("div:first-child");
+            firstDiv.classList.add('jsac-header');
 
-                secondDiv = element.querySelector("div:last-child");
-                secondDiv.classList.add('jsac-body');
+            secondDiv = element.querySelector("div:last-child");
+            secondDiv.classList.add('jsac-body');
 
-                hTags = element.querySelector('h3');
-                hTags.classList.add('jsac-titl-h');
+            hTags = element.querySelector('h3');
+            hTags.classList.add('jsac-titl-h');
 
-            });
+            //calling ClickFunction
+            firstDiv.addEventListener("click", ClickFunction);
+        });
 
     };
+    function ClickFunction() {
+        if (this.parentNode.classList.contains('collapsed')) {
+            this.parentNode.classList.remove('collapsed');
+            this.parentNode.classList.add('expanded');
+
+            } else if (this.parentNode.classList.contains('expanded')) {
+            this.parentNode.classList.remove('expanded');
+            this.parentNode.classList.add('collapsed');
+        }
+    }
 
     //  start construction operations
     //  if parameter is element selector
